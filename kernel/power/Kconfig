@@ -365,3 +365,7 @@ config CPU_FREQ_LIMIT_SCHEDBOOST
 	help
 	  Sched booster will be active when cpu min limit is set through /sys/power/cpufreq_min_limit
 
+config	BOEFFLA_WL_BLOCKER
+		bool "Boeffla generic wakelock blocker driver"
+		depends on PM
+		default N

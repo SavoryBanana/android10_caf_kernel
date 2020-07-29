@@ -6038,7 +6038,7 @@ static enum hrtimer_restart sched_cfs_period_timer(struct hrtimer *timer)
 		if (++count > 3) {
 			u64 new, old = ktime_to_ns(cfs_b->period);
 
-						/*
+			/*
 			 * Grow period by a factor of 2 to avoid losing precision.
 			 * Precision loss in the quota/period ratio can cause __cfs_schedulable
 			 * to fail.

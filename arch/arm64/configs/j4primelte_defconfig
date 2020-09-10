@@ -1809,6 +1809,7 @@ CONFIG_QMI_ENCDEC=y
 CONFIG_NAMESPACES=y
 
 #
-# MedusaKernel Spesific
+# Medusa Kernel Specific
 #
 CONFIG_KSM=y
+CONFIG_ADRENO_IDLER=y

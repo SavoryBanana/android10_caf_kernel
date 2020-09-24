@@ -594,6 +594,13 @@ endif # $(dot-config)
 # Defaults to vmlinux, but the arch makefile usually adds further targets
 all: vmlinux
 
+ifeq ($(cc-name),gcc)
+KBUILD_CFLAGS   += --param=inline-min-speedup=15
+KBUILD_CFLAGS   += --param=max-inline-insns-single=200
+KBUILD_CFLAGS   += --param=max-inline-insns-auto=30
+KBUILD_CFLAGS   += --param=early-inlining-insns=14
+endif
+
 ifeq ($(cc-name),clang)
 ifneq ($(CROSS_COMPILE),)
 CLANG_TRIPLE	?= $(CROSS_COMPILE)
